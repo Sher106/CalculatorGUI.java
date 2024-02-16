@@ -1,4 +1,4 @@
-
+// Imports used
 import java.time.LocalDate;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 
 //*********************************************************************************************
 // CalculatorGUI.java     Author: Hall/ Sherica
-//Date: February 16, 2024
+// Date: February 16, 2024
 //*********************************************************************************************
 
 public class CalculatorGUI extends Application {
