@@ -59,17 +59,17 @@ public class CalculatorGUI extends Application {
         ageImageView.setPreserveRatio(true);
         ageImageView.setImage(ageimg);
 
-        //Placing HBox for Horizontal positioning of objects
+        //Placing HBox for Horizontal Positioning of Component
         HBox pickers = new HBox(datePicker, colorPicker, ageImageView);
         pickers.setSpacing(15);
         pickers.setTranslateX(5);
-        pickers.setAlignment(Pos.CENTER);
+        pickers.setAlignment(Pos.CENTER);   // An HBox Method
 
-        //Placing VBox for Vertical positioning of objects
+        //Placing VBox for Vertical Positioning of Component
         VBox root = new VBox();
         root.setStyle("-fx-background-color: teal");
-        root.setSpacing(20);
-        root.setAlignment(Pos.CENTER);
+        root.setSpacing(20);              // A VBox Method
+        root.setAlignment(Pos.CENTER);    //A VBox Method
         root.getChildren().addAll(pickers, message);
 
         Scene scene = new Scene(root, 500, 350);
@@ -99,10 +99,10 @@ public class CalculatorGUI extends Application {
     //Creating calculator
     private int calculateAge(LocalDate birthdate) {
         LocalDate currentDate = LocalDate.now();
-        int age = currentDate.getYear() - birthdate.getYear();
+        int age = currentDate.getYear() - birthdate.getYear();  //Subtracts year of birth from current year
         if (birthdate.getMonthValue() > currentDate.getMonthValue() ||
                 (birthdate.getMonthValue() == currentDate.getMonthValue() && birthdate.getDayOfMonth() > currentDate.getDayOfMonth())) {
-            age--;
+            age--;   // Creating prompt for what should be displayed
         }
         return age;
     }
